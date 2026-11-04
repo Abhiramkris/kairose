@@ -4,31 +4,28 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { siteConfig } from "@/content/site-config";
 
 const heroSlides = [
   {
     image: "/images/hero/dubai-penthouse-dusk.jpg",
     title: "Redefining Luxury Interiors.",
     subtitle: "Bespoke designs for the discerning few. From concept to completion, we craft spaces that speak to your soul.",
-    badge: "Palm Jumeirah Penthouse",
   },
   {
     image: "/images/projects/emirates-hills-villa.jpg",
     title: "Transforming Spaces. Creating Excellence.",
     subtitle: "Complete Interior Fit-Out, MEP and Building Maintenance Solutions across Dubai’s most prestigious estates.",
-    badge: "Emirates Hills Villa",
   },
   {
     image: "/images/designs/midnight-marble-kitchen.jpg",
     title: "Timeless Craftsmanship & Precision.",
     subtitle: "Italian Calacatta marble, hand-brushed brass joinery, and monolithic architectural design tailored to your lifestyle.",
-    badge: "The Midnight Marble Suite",
   },
   {
     image: "/images/hero/penthouse-living-dusk.jpg",
     title: "Panoramic Skyline Sanctuaries.",
     subtitle: "Double-height living spaces framed by floor-to-ceiling glass, balancing boundless views with tactile domestic warmth.",
-    badge: "Downtown Dubai Sky Residence",
   },
 ];
 
@@ -71,7 +68,7 @@ export function Hero() {
   const slide = heroSlides[currentSlide];
 
   return (
-    <section className="relative w-full min-h-[92vh] sm:min-h-[94vh] h-auto overflow-hidden bg-[#0D0E10] flex flex-col justify-between">
+    <section className="relative w-full min-h-[90vh] sm:min-h-[92vh] h-auto overflow-hidden bg-[#0D0E10] flex flex-col justify-between">
       {/* Background Slideshow with Real Curated Photographs */}
       {heroSlides.map((s, idx) => (
         <div
@@ -94,17 +91,11 @@ export function Hero() {
       {/* Atmospheric Scrim for Legibility */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/25 pointer-events-none z-10"
+        className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/25 pointer-events-none z-10"
       />
 
-      {/* Slide Navigation Dots (Top-Right Subtle Monograph Indicator) */}
-      <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-16 pt-8 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <span className="text-[10px] uppercase tracking-[0.22em] text-[#A98A56] font-medium bg-[#0D0E10]/70 px-3 py-1 border border-[#A98A56]/40 rounded-[2px]">
-            {slide.badge}
-          </span>
-        </div>
-
+      {/* Slide Navigation Bars (Top-Right Subtle Indicator) */}
+      <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-16 pt-8 flex items-center justify-end">
         <div className="flex items-center gap-2">
           {heroSlides.map((_, i) => (
             <button
@@ -121,7 +112,7 @@ export function Hero() {
       </div>
 
       {/* Bottom Main Content & Hero Small Consultation Card */}
-      <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-16 pb-12 sm:pb-16 pt-24 sm:pt-32">
+      <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-16 pb-12 sm:pb-16 pt-20 sm:pt-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
           {/* Left Column: Monograph Headline and Subcopy */}
           <div className="lg:col-span-7">
@@ -129,7 +120,7 @@ export function Hero() {
               By Appointment — Dubai
             </Eyebrow>
 
-            <h1 className="font-serif text-[clamp(38px,5.2vw,84px)] text-[#F4F1EA] font-normal leading-[1.08] tracking-[-0.03em] mt-3">
+            <h1 className="font-serif text-[clamp(36px,5vw,80px)] text-[#F4F1EA] font-normal leading-[1.08] tracking-[-0.03em] mt-3">
               {slide.title}
             </h1>
 
@@ -157,7 +148,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Small Realistic Consultation Inquiry Card */}
+          {/* Right Column: Realistic Consultation Inquiry Card with Direct Contact Button */}
           <div className="lg:col-span-5 w-full">
             <div className="bg-[#0D0E10]/95 border border-[#A98A56]/60 p-6 sm:p-7 rounded-[2px] text-[#F4F1EA]">
               <div className="flex items-center justify-between pb-3 hairline-dark-b mb-4">
@@ -219,16 +210,31 @@ export function Hero() {
                     </select>
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full text-xs uppercase tracking-[0.18em] py-3 bg-[#A98A56] hover:bg-[#F4F1EA] text-[#0D0E10] font-medium transition-colors rounded-[2px] cursor-pointer"
-                  >
-                    Request a Consultation →
-                  </button>
+                  {/* Submission and Direct Contact Action Row */}
+                  <div className="space-y-2 pt-1">
+                    <button
+                      type="submit"
+                      className="w-full text-xs uppercase tracking-[0.18em] py-3 bg-[#A98A56] hover:bg-[#F4F1EA] text-[#0D0E10] font-medium transition-colors rounded-[2px] cursor-pointer"
+                    >
+                      Request a Consultation →
+                    </button>
 
-                  <p className="text-[10px] text-[#F4F1EA]/50 text-center tracking-wide font-light">
-                    Confidential • By Appointment Only
-                  </p>
+                    <a
+                      href={siteConfig.whatsAppUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center text-xs uppercase tracking-[0.18em] py-2.5 border border-[#A98A56]/60 text-[#A98A56] hover:bg-[#A98A56] hover:text-[#0D0E10] transition-colors rounded-[2px]"
+                    >
+                      Direct WhatsApp Contact
+                    </a>
+                  </div>
+
+                  <div className="pt-2 hairline-dark-t flex items-center justify-between text-[10px] text-[#F4F1EA]/50 font-light">
+                    <span>By Appointment Only</span>
+                    <a href={`mailto:${siteConfig.email}`} className="hover:text-[#A98A56] transition-colors">
+                      {siteConfig.email}
+                    </a>
+                  </div>
                 </form>
               )}
             </div>
