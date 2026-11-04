@@ -1,0 +1,27 @@
+/* Design system tokens for KaiRose - Luxury Interior Design Monograph */
+:root {
+  /* Palette */
+  --ink: #0D0E10;       /* Near-black, primary text and dark sections */
+  --ink-88: rgba(13, 14, 16, 0.88); /* Body copy primary */
+  --ink-60: rgba(13, 14, 16, 0.60); /* Subtle metadata */
+  --ink-40: rgba(13, 14, 16, 0.40); /* Faint labels */
+  --bone: #F4F1EA;      /* Page background */
+  --sand: #E4DCCD;      /* Subtle fills, hover states */
+  --brass: #A98A56;     /* Single accent — rules, link underlines, small caps eyebrows */
+  --brass-hover: #927546;
+  --emerald: #1E3A32;   /* Used once or twice site-wide, never as a button color */
+  --rule: #D6CCBB;      /* 1px hairlines — primary structural device */
+  --rule-dark: rgba(214, 204, 187, 0.2); /* Hairlines on ink dark sections */
+
+  /* Layout */
+  --grid-max-width: 1440px;
+  --gutter: 24px;
+  --page-margin-desktop: 64px;
+  --page-margin-mobile: 20px;
+  --section-spacing-desktop: 140px;
+  --section-spacing-mobile: 72px;
+
+  /* Typography */
+  --font-serif: var(--font-fraunces), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
