@@ -1,24 +1,31 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { footerNavigation } from "@/content/navigation";
 import { siteConfig } from "@/content/site-config";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function SiteFooter() {
   return (
     <footer className="bg-[#0D0E10] text-[#F4F1EA] hairline-dark-t pt-20 pb-12">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16 hairline-dark-b">
-          {/* Brand Monograph Statement */}
+          {/* Brand Monograph Statement with Official Logo */}
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
-              <span className="font-serif text-3xl md:text-4xl tracking-tight text-[#F4F1EA]">
-                {siteConfig.name}
-              </span>
-              <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[#A98A56]">
+              <div className="relative h-14 w-44 mb-4">
+                <Image
+                  src="/images/kairose-logo.png"
+                  alt="KaiRose Interior Design LLC"
+                  fill
+                  sizes="200px"
+                  className="object-contain object-left"
+                />
+              </div>
+
+              <p className="text-xs uppercase tracking-[0.2em] text-[#A98A56]">
                 Bespoke Interior Architecture — Dubai
               </p>
-              <p className="mt-6 text-sm text-[#F4F1EA]/70 max-w-sm leading-relaxed">
+              <p className="mt-6 text-sm text-[#F4F1EA]/70 max-w-sm leading-relaxed font-light">
                 {siteConfig.subcopy}
               </p>
             </div>

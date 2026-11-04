@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { mainNavigation } from "@/content/navigation";
 import { siteConfig } from "@/content/site-config";
@@ -9,16 +10,20 @@ export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-[#F4F1EA]/95 backdrop-none hairline-b transition-colors duration-200">
+    <header className="sticky top-0 z-40 bg-[#F4F1EA]/95 hairline-b transition-colors duration-200">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
-        {/* Monograph Wordmark */}
-        <Link href="/" className="group flex flex-col">
-          <span className="font-serif text-2xl tracking-[-0.03em] font-normal text-[#0D0E10] group-hover:text-[#A98A56] transition-colors duration-200">
-            {siteConfig.name}
-          </span>
-          <span className="text-[9px] uppercase tracking-[0.25em] text-[#A98A56]">
-            Dubai
-          </span>
+        {/* Official KaiRose Emblem & Wordmark */}
+        <Link href="/" className="group flex items-center gap-3">
+          <div className="relative h-10 w-28 sm:h-12 sm:w-36">
+            <Image
+              src="/images/kairose-logo.png"
+              alt="KaiRose Interior Design"
+              fill
+              priority
+              sizes="150px"
+              className="object-contain object-left"
+            />
+          </div>
         </Link>
 
         {/* Desktop Editorial Navigation */}
@@ -44,7 +49,7 @@ export function SiteHeader() {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle Button (Handcrafted lines) */}
+        {/* Mobile Menu Toggle Button */}
         <button
           type="button"
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
