@@ -127,19 +127,15 @@ export default function ComingSoonPage() {
         </div>
       </div>
 
-      {/* Footer: Direct Desk & Discretion Notice */}
+      {/* Footer: Email & Discretion Notice */}
       <footer className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-12 pb-8 sm:pb-12 pt-6 hairline-dark-t flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F4F1EA]/50 font-light">
-        <p>
-          © 2025 KaiRose Interior Design and Technical Services LLC.
-        </p>
+        <a
+          href={`mailto:${siteConfig.email}`}
+          className="hover:text-[#A98A56] transition-colors"
+        >
+          {siteConfig.email}
+        </a>
         <div className="flex items-center gap-6">
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="hover:text-[#A98A56] transition-colors"
-          >
-            {siteConfig.email}
-          </a>
-          <span>•</span>
           <span>By Appointment Only</span>
         </div>
       </footer>
