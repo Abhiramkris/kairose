@@ -8,22 +8,22 @@ import { siteConfig } from "@/content/site-config";
 
 const heroSlides = [
   {
-    image: "/images/hero/dubai-penthouse-dusk.jpg",
+    image: "/images/hero1/744469be222c35c89679dab0fece57e1548d5b5a-8448x5770.avif",
     title: "Redefining Luxury Interiors.",
     subtitle: "Bespoke designs for the discerning few. From concept to completion, we craft spaces that speak to your soul.",
   },
   {
-    image: "/images/projects/emirates-hills-villa.jpg",
+    image: "/images/hero1/videoframe_7092.png",
     title: "Transforming Spaces. Creating Excellence.",
     subtitle: "Complete Interior Fit-Out, MEP and Building Maintenance Solutions across Dubai’s most prestigious estates.",
   },
   {
-    image: "/images/designs/midnight-marble-kitchen.jpg",
+    image: "/images/hero1/videoframe_1439.png",
     title: "Timeless Craftsmanship & Precision.",
-    subtitle: "Italian Calacatta marble, hand-brushed brass joinery, and monolithic architectural design tailored to your lifestyle.",
+    subtitle: "Artisanal detailing, hand-brushed brass joinery, and monolithic architectural design tailored to your lifestyle.",
   },
   {
-    image: "/images/hero/penthouse-living-dusk.jpg",
+    image: "/images/hero1/b0164608867e856c07c82428c576338b3ad41c9b-5400x4084.avif",
     title: "Panoramic Skyline Sanctuaries.",
     subtitle: "Double-height living spaces framed by floor-to-ceiling glass, balancing boundless views with tactile domestic warmth.",
   },

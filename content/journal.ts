@@ -18,7 +18,7 @@ export const featuredArticle: JournalArticle = {
   oneLiner: "From Bohemian to Art Deco, discover the styles shaping luxury interiors this year.",
   readTime: "6 min read",
   publishedAt: "2025-01-15",
-  image: "/images/journal/styles-2025.jpg",
+  image: "/images/hero1/videoframe_10439.png",
   content: [
     "Luxury interior design in Dubai has reached an inflection point where superficial spectacle gives way to material integrity and bespoke craftsmanship. In 2025, our clients seek spaces that resonate on an emotional level—architectural sanctuaries that balance commanding skyline views with quiet tactile intimacy.",
     "From rich Art Deco geometry celebrated through Calacatta marble and hand-brushed brass to the understated elegance of modern minimalism, the styles defining this year prioritize authentic permanence over transient trends.",
@@ -36,7 +36,7 @@ export const journalArticles: JournalArticle[] = [
     oneLiner: "An in-depth exploration of Calacatta, Statuario, and honed finishes for discerning residences.",
     readTime: "5 min read",
     publishedAt: "2025-01-28",
-    image: "/images/journal/marble-guide.jpg",
+    image: "/images/hero1/videoframe_7377.png",
     content: [
       "Natural stone is the tactile soul of the luxury residence. Understanding the nuances between Calacatta veining and Nero Marquina depth allows homeowners to choose finishes that mature with grace.",
       "Honed surfaces offer a velvety, tactile warmth that diffuses harsh desert sunlight, while polished slabs provide monumental drama in grand entry foyers and master bathrooms.",
@@ -50,7 +50,7 @@ export const journalArticles: JournalArticle[] = [
     oneLiner: "Balancing Art Deco grandeur with intimate domestic warmth overlooking the Arabian Gulf.",
     readTime: "7 min read",
     publishedAt: "2025-02-04",
-    image: "/images/journal/penthouse-spotlight.jpg",
+    image: "/images/hero1/20f291b13682b88ac6159f8b25f69d05c38387f7-5400x4029.avif",
     content: [
       "Perched high above the Palm Jumeirah crescent, this 6,500 sq. ft. residence presented a singular architectural challenge: how to frame panoramic vistas while retaining sanctuary-like intimacy.",
       "By contrasting gold-leaf architectural ceilings with deep emerald velvet upholstery, our design team established a grounded, luxurious rhythm throughout.",
@@ -64,7 +64,7 @@ export const journalArticles: JournalArticle[] = [
     oneLiner: "How fluted glass, concealed appliances, and architectural islands redefined culinary spaces.",
     readTime: "4 min read",
     publishedAt: "2025-02-12",
-    image: "/images/journal/bespoke-kitchen.jpg",
+    image: "/images/hero1/f1a74ff5f63d778540a9cd1b119ac792acb512e6-5400x3877.avif",
     content: [
       "The kitchen has evolved beyond utility into the primary architectural hearth of the modern residence. Pre-fabricated cabinetry cannot accommodate the tailored joinery required for luxury entertaining.",
       "Our bespoke approach integrates gold-lit fluted glass storage with monolithic marble islands that serve as both culinary prep stations and elegant social hubs.",
@@ -78,7 +78,7 @@ export const journalArticles: JournalArticle[] = [
     oneLiner: "Essential guidance for navigating white-glove turnkey interior commissions in the UAE.",
     readTime: "6 min read",
     publishedAt: "2025-02-19",
-    image: "/images/journal/designer-questions.jpg",
+    image: "/images/hero1/videoframe_1439.png",
     content: [
       "Commissioning an interior design studio is an intimate partnership. Prior to signing agreements, prospective clients must understand turnkey oversight, procurement timelines, and craftsmanship warranties.",
       "This practical checklist arms you with the critical inquiries needed to ensure flawless delivery from vision to reveal.",

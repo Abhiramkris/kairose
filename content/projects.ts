@@ -39,7 +39,7 @@ export const projectsData: ProjectItem[] = [
       features: "Private Terrace with Skyline Views",
       timeline: "120 Days",
     },
-    heroImage: "/images/projects/palm-jumeirah-penthouse.jpg",
+    heroImage: "/images/hero1/videoframe_1439.png",
   },
   {
     id: "emirates-hills-villa",
@@ -63,7 +63,7 @@ export const projectsData: ProjectItem[] = [
       features: "Private Pool and Spa",
       timeline: "180 Days",
     },
-    heroImage: "/images/projects/emirates-hills-villa.jpg",
+    heroImage: "/images/hero1/744469be222c35c89679dab0fece57e1548d5b5a-8448x5770.avif",
   },
   {
     id: "downtown-townhouse",
@@ -87,6 +87,6 @@ export const projectsData: ProjectItem[] = [
       features: "Private Garden",
       timeline: "90 Days",
     },
-    heroImage: "/images/projects/downtown-townhouse.jpg",
+    heroImage: "/images/hero1/videoframe_7092.png",
   },
 ];

@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { servicesData } from "@/content/services";
+import { getAllServices } from "@/content/services";
 
 export function ServiceIndex() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const services = getAllServices();
 
   return (
     <section className="py-20 lg:py-32 bg-[#F4F1EA] hairline-b">
@@ -20,25 +21,25 @@ export function ServiceIndex() {
           </h2>
         </div>
 
-        {/* Numbered Index List — 5 rows with 01-05 */}
+        {/* Numbered Index List */}
         <div className="relative">
-          {servicesData.map((service) => {
-            const isHovered = hoveredService === service.id;
+          {services.map((service, idx) => {
+            const isHovered = hoveredService === service.slug;
 
             return (
               <div
-                key={service.id}
-                onMouseEnter={() => setHoveredService(service.id)}
+                key={service.slug}
+                onMouseEnter={() => setHoveredService(service.slug)}
                 onMouseLeave={() => setHoveredService(null)}
                 className="relative group transition-colors duration-300 hover:bg-[#E4DCCD] px-4 sm:px-8 py-8 sm:py-10 hairline-b flex flex-col md:flex-row md:items-center justify-between gap-6"
               >
                 {/* Left: Number and Service Name */}
                 <div className="flex items-baseline gap-6 md:gap-10 md:w-5/12">
                   <span className="text-xs uppercase tracking-[0.2em] text-[#A98A56] font-medium font-sans">
-                    {service.index}
+                    0{idx + 1}
                   </span>
                   <Link
-                    href={`/services#${service.slug}`}
+                    href={`/services/${service.slug}`}
                     className="font-serif text-2xl sm:text-3xl text-[#0D0E10] group-hover:text-[#0D0E10] transition-colors"
                   >
                     {service.title}
@@ -48,7 +49,7 @@ export function ServiceIndex() {
                 {/* Middle: One-line description */}
                 <div className="md:w-4/12">
                   <p className="text-sm text-[#0D0E10]/70 leading-relaxed font-light">
-                    {service.oneLiner}
+                    {service.description}
                   </p>
                 </div>
 
@@ -62,8 +63,8 @@ export function ServiceIndex() {
                     }`}
                   >
                     <Image
-                      src={service.previewImage}
-                      alt={service.title}
+                      src={service.heroImage}
+                      alt={service.heroAlt}
                       fill
                       sizes="80px"
                       className="object-cover film-grade"
@@ -72,10 +73,10 @@ export function ServiceIndex() {
 
                   <div className="flex items-center gap-3">
                     <Link
-                      href={`/contact?intent=quote&service=${service.slug}`}
+                      href={`/services/${service.slug}`}
                       className="text-xs uppercase tracking-[0.18em] px-4 py-2 bg-[#0D0E10] text-[#F4F1EA] hover:bg-[#A98A56] hover:text-[#0D0E10] transition-colors rounded-[2px] whitespace-nowrap"
                     >
-                      Make Yours Like This →
+                      Explore Service →
                     </Link>
                   </div>
                 </div>

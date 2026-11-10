@@ -24,7 +24,7 @@ export const videoTestimonials: VideoTestimonial[] = [
     location: "Palm Jumeirah, Dubai",
     quote: "They didn’t just design our home; they understood our lifestyle.",
     duration: "2:30",
-    thumbnail: "/images/testimonials/sharma-penthouse.jpg",
+    thumbnail: "/images/hero1/videoframe_7092.png",
     videoPlaceholderUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
   },
   {
@@ -34,7 +34,7 @@ export const videoTestimonials: VideoTestimonial[] = [
     location: "Emirates Hills, Dubai",
     quote: "The white-glove service made the entire process stress-free.",
     duration: "3:15",
-    thumbnail: "/images/testimonials/kapoor-villa.jpg",
+    thumbnail: "/images/hero1/744469be222c35c89679dab0fece57e1548d5b5a-8448x5770.avif",
     videoPlaceholderUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
   },
   {
@@ -44,7 +44,7 @@ export const videoTestimonials: VideoTestimonial[] = [
     location: "Downtown Dubai",
     quote: "They designed a home we never want to leave.",
     duration: "2:45",
-    thumbnail: "/images/testimonials/mehta-penthouse.jpg",
+    thumbnail: "/images/hero1/videoframe_1439.png",
     videoPlaceholderUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
   },
   {
@@ -54,7 +54,7 @@ export const videoTestimonials: VideoTestimonial[] = [
     location: "Downtown Dubai",
     quote: "Every floor was tailored to our family's rhythm with hidden elegance.",
     duration: "2:00",
-    thumbnail: "/images/testimonials/iyer-townhouse.jpg",
+    thumbnail: "/images/hero1/b0164608867e856c07c82428c576338b3ad41c9b-5400x4084.avif",
     videoPlaceholderUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
   },
   {
@@ -64,7 +64,7 @@ export const videoTestimonials: VideoTestimonial[] = [
     location: "Arabian Ranches, Dubai",
     quote: "The transition from concept renderings to the finished build was flawless.",
     duration: "3:00",
-    thumbnail: "/images/testimonials/nair-villa.jpg",
+    thumbnail: "/images/hero1/20f291b13682b88ac6159f8b25f69d05c38387f7-5400x4029.avif",
     videoPlaceholderUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
   },
 ];

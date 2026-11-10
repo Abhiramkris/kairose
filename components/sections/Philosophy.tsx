@@ -30,8 +30,8 @@ export function Philosophy() {
           {/* Right Column: Full-bleed material detail image bleeding off the right viewport edge */}
           <div className="lg:col-span-5 relative min-h-[360px] lg:min-h-full">
             <Image
-              src="/images/philosophy/marble-brass-detail.jpg"
-              alt="Italian Calacatta marble countertop with hand-brushed brass detailing"
+              src="/images/hero1/videoframe_7377.png"
+              alt="Italian marble and rose terrazzo double vanity with hand-brushed brass detailing"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
               className="object-cover film-grade"

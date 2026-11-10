@@ -27,7 +27,7 @@ export const designsData: DesignItem[] = [
     style: "Art Deco",
     styleTag: "Art Deco / Modern Minimal",
     popularity: "Trending Now",
-    image: "/images/designs/midnight-marble-kitchen.jpg",
+    image: "/images/hero1/f1a74ff5f63d778540a9cd1b119ac792acb512e6-5400x3877.avif",
     description:
       "Inspired by Art Deco glamour, this kitchen is a study in contrasts. Deep midnight blue cabinetry meets dramatic Calacatta marble veining, while brushed brass hardware adds warmth. The custom island serves as both prep space and gathering point. Every detail—from fluted glass doors to gold-lit shelving—makes cooking feel like an occasion.",
     materialPalette: [
@@ -64,7 +64,7 @@ export const designsData: DesignItem[] = [
     style: "Contemporary",
     styleTag: "Contemporary Luxe",
     popularity: "Trending Now",
-    image: "/images/designs/golden-hour-living-room.jpg",
+    image: "/images/hero1/744469be222c35c89679dab0fece57e1548d5b5a-8448x5770.avif",
     description: "Bathed in warm amber light, an expansive lounge pairing floor-to-ceiling panoramic glass with custom linen upholstery and travertine accents.",
     materialPalette: ["Honed Travertine", "Brushed Bronze", "Belgian Linen", "Smoked Oak"],
     specifications: {
@@ -87,7 +87,7 @@ export const designsData: DesignItem[] = [
     style: "Classic Glamour",
     styleTag: "Classic Glamour",
     popularity: "Trending Now",
-    image: "/images/designs/emerald-suite-bedroom.jpg",
+    image: "/images/hero1/b0164608867e856c07c82428c576338b3ad41c9b-5400x4084.avif",
     description: "An intimate sanctuary draped in deep emerald velvet with hand-crafted walnut panelling and soft, indirect perimeter lighting.",
     materialPalette: ["Deep Emerald Velvet", "American Walnut", "Brushed Brass", "Hand-Tufted Wool"],
     specifications: {
@@ -110,7 +110,7 @@ export const designsData: DesignItem[] = [
     style: "Modern Minimal",
     styleTag: "Modern Minimal",
     popularity: "Most Viewed",
-    image: "/images/designs/onyx-wardrobe.jpg",
+    image: "/images/hero1/videoframe_7377.png",
   },
   {
     id: "ivory-dining-room",
@@ -120,7 +120,7 @@ export const designsData: DesignItem[] = [
     style: "Art Deco",
     styleTag: "Art Deco",
     popularity: "Most Viewed",
-    image: "/images/designs/ivory-dining-room.jpg",
+    image: "/images/hero1/videoframe_1439.png",
   },
   {
     id: "brass-velvet-lounge",
@@ -130,7 +130,7 @@ export const designsData: DesignItem[] = [
     style: "Contemporary",
     styleTag: "Contemporary Luxe",
     popularity: "Trending Now",
-    image: "/images/designs/brass-velvet-lounge.jpg",
+    image: "/images/hero1/videoframe_7092.png",
   },
   {
     id: "marble-master-bath",
@@ -140,7 +140,7 @@ export const designsData: DesignItem[] = [
     style: "Classic Glamour",
     styleTag: "Classic Glamour",
     popularity: "Recently Added",
-    image: "/images/designs/marble-master-bath.jpg",
+    image: "/images/hero1/videoframe_7377.png",
   },
   {
     id: "gold-leaf-ceiling-living-room",
@@ -150,7 +150,7 @@ export const designsData: DesignItem[] = [
     style: "Art Deco",
     styleTag: "Art Deco",
     popularity: "Most Viewed",
-    image: "/images/designs/gold-leaf-ceiling-living-room.jpg",
+    image: "/images/hero1/20f291b13682b88ac6159f8b25f69d05c38387f7-5400x4029.avif",
   },
   {
     id: "walnut-brass-kitchen",
@@ -160,7 +160,7 @@ export const designsData: DesignItem[] = [
     style: "Modern Minimal",
     styleTag: "Modern Minimal",
     popularity: "Recently Added",
-    image: "/images/designs/walnut-brass-kitchen.jpg",
+    image: "/images/hero1/f1a74ff5f63d778540a9cd1b119ac792acb512e6-5400x3877.avif",
   },
   {
     id: "silk-sapphire-bedroom",
@@ -170,7 +170,7 @@ export const designsData: DesignItem[] = [
     style: "Classic Glamour",
     styleTag: "Classic Glamour",
     popularity: "Recently Added",
-    image: "/images/designs/silk-sapphire-bedroom.jpg",
+    image: "/images/hero1/b0164608867e856c07c82428c576338b3ad41c9b-5400x4084.avif",
   },
   {
     id: "terrace-oasis",
@@ -180,7 +180,7 @@ export const designsData: DesignItem[] = [
     style: "Bohemian",
     styleTag: "Bohemian",
     popularity: "Most Viewed",
-    image: "/images/designs/terrace-oasis.jpg",
+    image: "/images/hero1/videoframe_10439.png",
   },
   {
     id: "sculptural-staircase",
@@ -190,7 +190,7 @@ export const designsData: DesignItem[] = [
     style: "Contemporary",
     styleTag: "Contemporary Luxe",
     popularity: "Recently Added",
-    image: "/images/designs/sculptural-staircase.jpg",
+    image: "/images/hero1/videoframe_7092.png",
   },
   {
     id: "reading-nook",
@@ -200,7 +200,7 @@ export const designsData: DesignItem[] = [
     style: "Minimalist",
     styleTag: "Minimalist",
     popularity: "Recently Added",
-    image: "/images/designs/reading-nook.jpg",
+    image: "/images/hero1/20f291b13682b88ac6159f8b25f69d05c38387f7-5400x4029.avif",
   },
   {
     id: "grand-foyer",
@@ -210,7 +210,7 @@ export const designsData: DesignItem[] = [
     style: "Art Deco",
     styleTag: "Art Deco",
     popularity: "Most Viewed",
-    image: "/images/designs/grand-foyer.jpg",
+    image: "/images/hero1/744469be222c35c89679dab0fece57e1548d5b5a-8448x5770.avif",
   },
   {
     id: "chefs-kitchen",
@@ -220,6 +220,6 @@ export const designsData: DesignItem[] = [
     style: "Industrial",
     styleTag: "Industrial",
     popularity: "Recently Added",
-    image: "/images/designs/chefs-kitchen.jpg",
+    image: "/images/hero1/f1a74ff5f63d778540a9cd1b119ac792acb512e6-5400x3877.avif",
   },
 ];

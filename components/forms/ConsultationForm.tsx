@@ -1,37 +1,32 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 export function ConsultationForm() {
   const searchParams = useSearchParams();
+  const initialDetails = React.useMemo(() => {
+    if (!searchParams) return "";
+    const intent = searchParams.get("intent");
+    const service = searchParams.get("service");
+    const ref = searchParams.get("ref");
+    if (intent === "quote" && service) {
+      return `Inquiring for formal quotation regarding: ${service.replace(/-/g, " ").toUpperCase()}`;
+    }
+    if (intent === "design" && ref) {
+      return `Consultation request inspired by design reference: ${ref.replace(/-/g, " ").toUpperCase()}`;
+    }
+    return "";
+  }, [searchParams]);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    details: "",
+    details: initialDetails,
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    if (!searchParams) return;
-    const intent = searchParams.get("intent");
-    const service = searchParams.get("service");
-    const ref = searchParams.get("ref");
-
-    if (intent === "quote" && service) {
-      setFormData((prev) => ({
-        ...prev,
-        details: `Inquiring for formal quotation regarding: ${service.replace(/-/g, " ").toUpperCase()}`,
-      }));
-    } else if (intent === "design" && ref) {
-      setFormData((prev) => ({
-        ...prev,
-        details: `Consultation request inspired by design reference: ${ref.replace(/-/g, " ").toUpperCase()}`,
-      }));
-    }
-  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,11 +46,11 @@ export function ConsultationForm() {
         setFormData({ name: "", email: "", phone: "", details: "" });
       } else {
         setStatus("error");
-        setMessage("Unable to submit. Please contact us directly at hello@kairose.ae.");
+        setMessage("Unable to submit. Please contact us directly at info@kairosegroup.com.");
       }
     } catch {
       setStatus("error");
-      setMessage("Unable to submit. Please contact us directly at hello@kairose.ae.");
+      setMessage("Unable to submit. Please contact us directly at info@kairosegroup.com.");
     }
   };
 

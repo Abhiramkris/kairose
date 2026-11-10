@@ -1,132 +1,181 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { footerNavigation } from "@/content/navigation";
+import { motion } from "framer-motion";
 import { siteConfig } from "@/content/site-config";
 
 export function SiteFooter() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail) return;
+    setSubscribed(true);
+  };
+
   return (
-    <footer className="bg-[#0D0E10] text-[#F4F1EA] hairline-dark-t pt-20 pb-12">
+    <footer id="footer" className="w-full bg-[#EFE6DC] border-t border-black/10 text-[#221E1B] pt-16 sm:pt-20 pb-12">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16 hairline-dark-b">
-          {/* Brand Monograph Statement with Official Logo */}
+        <motion.div
+          initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 18,
+            mass: 0.85,
+            filter: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+          }}
+          className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 pb-12 border-b border-black/10"
+        >
+          {/* Brand Column */}
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="relative h-14 w-44 mb-4">
+              <div className="relative h-12 w-40 sm:h-14 sm:w-48 mb-4">
                 <Image
                   src="/images/kairose-logo.png"
-                  alt="KaiRose Interior Design LLC"
+                  alt="KaiRose Luxury Interior Design and Architecture Studio Dubai UAE"
                   fill
-                  sizes="200px"
+                  sizes="220px"
                   className="object-contain object-left"
                 />
               </div>
 
-              <p className="text-xs uppercase tracking-[0.2em] text-[#A98A56]">
-                Bespoke Interior Architecture — Dubai
+              <p className="font-montserrat text-xs uppercase tracking-[0.2em] text-[#A98A56] font-semibold mb-3">
+                Interior Design Studio for Timeless Spaces
               </p>
-              <p className="mt-6 text-sm text-[#F4F1EA]/70 max-w-sm leading-relaxed font-light">
-                {siteConfig.subcopy}
+              <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 max-w-sm leading-relaxed">
+                Bespoke residential architecture, luxury villa renovations, and turnkey fit-outs across Dubai’s most distinguished enclaves including Palm Jumeirah, Emirates Hills, and Downtown Dubai.
               </p>
             </div>
 
-            <div className="mt-8 pt-6 hairline-dark-t text-xs text-[#F4F1EA]/50 space-y-1">
+            <div className="mt-6 text-xs text-[#221E1B]/70 space-y-1 font-montserrat">
+              <p className="font-medium text-[#452702]">Studio Showroom & Office</p>
               <p>{siteConfig.addressToken}</p>
-              <p>{siteConfig.hours}</p>
+              <p>By Appointment Only • Monday – Saturday (09:00 - 18:00)</p>
             </div>
           </div>
 
-          {/* Curation Links */}
-          <div className="md:col-span-2">
-            <span className="text-[11px] uppercase tracking-[0.18em] text-[#A98A56] font-medium block mb-6">
-              Portfolio
-            </span>
-            <ul className="space-y-3.5 text-xs uppercase tracking-[0.14em]">
-              {footerNavigation.curation.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-[#F4F1EA]/70 hover:text-[#F4F1EA] transition-colors duration-200"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Studio Links */}
-          <div className="md:col-span-2">
-            <span className="text-[11px] uppercase tracking-[0.18em] text-[#A98A56] font-medium block mb-6">
-              The Studio
-            </span>
-            <ul className="space-y-3.5 text-xs uppercase tracking-[0.14em]">
-              {footerNavigation.company.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-[#F4F1EA]/70 hover:text-[#F4F1EA] transition-colors duration-200"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Direct Channels */}
+          {/* Quick Links */}
           <div className="md:col-span-3">
-            <span className="text-[11px] uppercase tracking-[0.18em] text-[#A98A56] font-medium block mb-6">
-              Inquiries
+            <span className="font-montserrat text-xs uppercase tracking-[0.2em] text-[#452702] font-semibold block mb-5">
+              Navigation
             </span>
-            <div className="space-y-4 text-xs">
-              <div>
-                <span className="text-[#F4F1EA]/40 uppercase tracking-widest block text-[10px]">
-                  Email
-                </span>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="text-[#F4F1EA] hover:text-[#A98A56] tracking-wide transition-colors duration-200"
-                >
-                  {siteConfig.email}
-                </a>
+            <ul className="space-y-3 font-montserrat text-xs uppercase tracking-[0.14em]">
+              <li>
+                <Link href="/" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/#popular-designs" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
+                  Popular Designs
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
+                  Our Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/#our-approach" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
+                  Our Approach
+                </Link>
+              </li>
+              <li>
+                <Link href="/#testimonials" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link href="/#faq" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Direct Inquiries & Newsletter */}
+          <div className="md:col-span-4 flex flex-col justify-between">
+            <div>
+              <span className="font-montserrat text-xs uppercase tracking-[0.2em] text-[#452702] font-semibold block mb-5">
+                Private Inquiries
+              </span>
+              <div className="space-y-2.5 font-montserrat text-xs mb-6">
+                <p>
+                  <span className="text-[#A98A56] font-medium mr-2">Email:</span>
+                  <a href={`mailto:${siteConfig.email}`} className="text-[#452702] hover:underline">
+                    {siteConfig.email}
+                  </a>
+                </p>
+                <p>
+                  <span className="text-[#A98A56] font-medium mr-2">Telephone:</span>
+                  <a href={siteConfig.phoneCallUrl} className="text-[#452702] hover:underline">
+                    {siteConfig.phoneToken}
+                  </a>
+                </p>
+                <p>
+                  <span className="text-[#A98A56] font-medium mr-2">WhatsApp:</span>
+                  <a href={siteConfig.whatsAppUrl} target="_blank" rel="noopener noreferrer" className="text-[#452702] hover:underline">
+                    {siteConfig.whatsAppToken}
+                  </a>
+                </p>
+                <p>
+                  <span className="text-[#A98A56] font-medium mr-2">Website:</span>
+                  <a href={siteConfig.websiteUrl} target="_blank" rel="noopener noreferrer" className="text-[#452702] hover:underline">
+                    {siteConfig.websiteDisplay}
+                  </a>
+                </p>
               </div>
+
+              {/* Private Curation Newsletter */}
               <div>
-                <span className="text-[#F4F1EA]/40 uppercase tracking-widest block text-[10px]">
-                  Direct Desk
+                <span className="font-montserrat text-[11px] uppercase tracking-wider text-[#452702] font-medium block mb-2">
+                  Receive Private Design Monograph
                 </span>
-                <span className="text-[#F4F1EA]/70">{siteConfig.phoneToken}</span>
-              </div>
-              <div>
-                <span className="text-[#F4F1EA]/40 uppercase tracking-widest block text-[10px]">
-                  WhatsApp Channel
-                </span>
-                <a
-                  href={siteConfig.whatsAppUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#A98A56] hover:underline tracking-wide"
-                >
-                  {siteConfig.whatsAppToken}
-                </a>
+                {subscribed ? (
+                  <p className="text-xs text-[#452702] font-medium">
+                    Thank you. The private edition will be dispatched to your inbox.
+                  </p>
+                ) : (
+                  <form onSubmit={handleSubscribe} className="flex gap-2">
+                    <input
+                      type="email"
+                      required
+                      placeholder="Enter your email"
+                      value={newsletterEmail}
+                      onChange={(e) => setNewsletterEmail(e.target.value)}
+                      className="flex-1 bg-[#FAF6F0] border border-[rgba(69,39,2,0.2)] px-3 py-2 text-xs rounded text-[#221E1B] placeholder-[#221E1B]/40 focus:outline-none focus:border-[#452702]"
+                    />
+                    <button
+                      type="submit"
+                      className="px-4 py-2 bg-[#452702] hover:bg-[#5D3503] text-white text-[10px] uppercase tracking-wider font-medium rounded transition-colors"
+                    >
+                      Join
+                    </button>
+                  </form>
+                )}
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Bottom Metadata & Legal */}
-        <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#F4F1EA]/40">
-          <p>© 2025 {siteConfig.legalName}. All rights reserved.</p>
+        {/* Bottom Copyright */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-montserrat text-xs text-[#221E1B]/60">
+          <p>© 2026 KaiRose Interior Design LLC. All rights reserved. Dubai, United Arab Emirates.</p>
           <div className="flex items-center gap-6">
-            {footerNavigation.legal.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="hover:text-[#F4F1EA]/80 transition-colors duration-200"
-              >
-                {item.label}
-              </Link>
-            ))}
+            <span className="hover:text-[#452702] cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-[#452702] cursor-pointer">Terms of Engagement</span>
+            <span className="hover:text-[#452702] cursor-pointer">Dubai Fit-Out Standards</span>
           </div>
         </div>
       </div>
