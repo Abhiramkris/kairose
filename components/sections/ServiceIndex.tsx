@@ -76,7 +76,7 @@ export function ServiceIndex() {
                       href={`/services/${service.slug}`}
                       className="text-xs uppercase tracking-[0.18em] px-4 py-2 bg-[#0D0E10] text-[#F4F1EA] hover:bg-[#A98A56] hover:text-[#0D0E10] transition-colors rounded-[2px] whitespace-nowrap"
                     >
-                      Explore Service →
+                      Explore →
                     </Link>
                   </div>
                 </div>

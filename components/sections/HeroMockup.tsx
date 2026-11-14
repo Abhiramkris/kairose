@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { HeroData } from "@/lib/supabase";
@@ -11,6 +11,21 @@ interface HeroMockupProps {
 }
 
 export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
+  // Responsive mobile touch check for lightweight scroll calculations
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(
+        window.innerWidth < 768 ||
+        window.matchMedia("(pointer: coarse)").matches
+      );
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile, { passive: true });
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   // High-resolution WebP images from designer's PDF with SEO-optimized alt descriptions
   const cards = [
     {
@@ -50,15 +65,34 @@ export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
   });
 
   // Opposing Kinetic Typography: Row 1 goes Left-to-Right, Row 2 goes Right-to-Left on scroll
-  const xRow1 = useTransform(section2ScrollY, [0, 1], ["-32%", "12%"]);
-  const xRow2 = useTransform(section2ScrollY, [0, 1], ["12%", "-32%"]);
+  const xRow1 = useTransform(section2ScrollY, (v) => {
+    const start = isMobile ? -14 : -32;
+    const end = isMobile ? 4 : 12;
+    return `${start + v * (end - start)}%`;
+  });
+
+  const xRow2 = useTransform(section2ScrollY, (v) => {
+    const start = isMobile ? 4 : 12;
+    const end = isMobile ? -14 : -32;
+    return `${start + v * (end - start)}%`;
+  });
 
   // Foreground Portrait Image: rises UPWARDS with scroll parallax over the moving text and background
-  const portraitY = useTransform(section2ScrollY, [0, 1], [140, -140]);
-  const portraitScale = useTransform(section2ScrollY, [0, 0.5, 1], [0.96, 1.02, 0.98]);
+  const portraitY = useTransform(section2ScrollY, (v) => {
+    const range = isMobile ? 30 : 140;
+    return (0.5 - v) * 2 * range;
+  });
+
+  const portraitScale = useTransform(section2ScrollY, (v) => {
+    if (isMobile) return 1;
+    return 0.96 + Math.sin(v * Math.PI) * 0.06;
+  });
 
   // Subtle background zoom/drift
-  const bgY = useTransform(section2ScrollY, [0, 1], ["-6%", "6%"]);
+  const bgY = useTransform(section2ScrollY, (v) => {
+    const pct = isMobile ? 2 : 6;
+    return `${(v - 0.5) * 2 * pct}%`;
+  });
 
   return (
     <section className="relative w-full bg-[#F8F1E8] pt-4 sm:pt-7 pb-12 sm:pb-16 overflow-hidden">
@@ -169,7 +203,7 @@ export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
           {/* Background Layer with Subtle Parallax Float */}
           <motion.div
             style={{ y: bgY, scale: 1.12 }}
-            className="absolute inset-0 w-full h-[120%] -top-[10%] will-change-transform"
+            className="absolute inset-0 w-full h-[120%] -top-[10%] transform-gpu will-change-transform"
           >
             <Image
               src="/images/hero1/744469be222c35c89679dab0fece57e1548d5b5a-8448x5770.avif"
@@ -182,7 +216,7 @@ export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
             {/* Atmospheric cinematic darkening washes ensuring crystal readability of typography and portrait */}
             <div
               aria-hidden="true"
-              className="absolute inset-0 bg-black/45 backdrop-blur-[0.5px] pointer-events-none"
+              className="absolute inset-0 bg-black/45 pointer-events-none"
             />
             <div
               aria-hidden="true"
@@ -198,9 +232,9 @@ export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
             {/* Row 1: Left to Right on scroll */}
             <motion.div
               style={{ x: xRow1 }}
-              className="whitespace-nowrap flex items-center space-x-8 sm:space-x-12 will-change-transform opacity-80 sm:opacity-90"
+              className="whitespace-nowrap flex items-center space-x-8 sm:space-x-12 transform-gpu will-change-transform opacity-80 sm:opacity-90"
             >
-              <span className="font-cradley text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[135px] font-light text-white tracking-tight uppercase drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]">
+              <span className="font-cradley text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[135px] font-light text-white tracking-tight uppercase">
                 MODERN | LUXURY • ARCHITECTURAL EXCELLENCE • TIMELESS SPACES • KAIROSE DUBAI • MODERN | LUXURY • ARCHITECTURAL EXCELLENCE
               </span>
             </motion.div>
@@ -208,9 +242,9 @@ export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
             {/* Row 2: Right to Left on scroll */}
             <motion.div
               style={{ x: xRow2 }}
-              className="whitespace-nowrap flex items-center space-x-8 sm:space-x-12 will-change-transform opacity-80 sm:opacity-90"
+              className="whitespace-nowrap flex items-center space-x-8 sm:space-x-12 transform-gpu will-change-transform opacity-80 sm:opacity-90"
             >
-              <span className="font-cradley text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[135px] font-light text-white tracking-tight uppercase drop-shadow-[0_4px_12px_rgba(0,0,0,0.6)]">
+              <span className="font-cradley text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[135px] font-light text-white tracking-tight uppercase">
                 REDEFINING LUXURY • TIMELESS SPACES • PRIVATE RESIDENCES • TURNKEY FIT-OUT • REDEFINING LUXURY • TIMELESS SPACES
               </span>
             </motion.div>
@@ -232,9 +266,6 @@ export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
               }}
               className="w-full lg:max-w-[540px] bg-black/55 backdrop-blur-md p-6 sm:p-10 rounded-[6px] border border-white/20 shadow-2xl text-left"
             >
-              <span className="text-[#D6CCBB] font-montserrat text-xs uppercase tracking-[0.24em] font-semibold block mb-3">
-                Dubai Studio • Bespoke Commissions
-              </span>
               <h2 className="font-montserrat font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-4 leading-tight">
                 Redefining Luxury Interiors.
               </h2>
@@ -252,7 +283,7 @@ export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
             {/* Right Column: Rising Portrait Image overlapping text & background on scroll */}
             <motion.div
               style={{ y: portraitY, scale: portraitScale }}
-              className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[480px] xl:w-[500px] aspect-[3/3.8] sm:aspect-[3/3.6] rounded-[6px] overflow-hidden border border-white/30 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.8)] group bg-[#16120E] flex-shrink-0 will-change-transform"
+              className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[480px] xl:w-[500px] aspect-[3/3.8] sm:aspect-[3/3.6] rounded-[6px] overflow-hidden border border-white/30 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.7)] group bg-[#16120E] flex-shrink-0 transform-gpu will-change-transform"
             >
               <Image
                 src="/images/hero1/b0164608867e856c07c82428c576338b3ad41c9b-5400x4084.avif"

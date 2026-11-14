@@ -122,7 +122,7 @@ export function ServicesIndexClient({ services }: ServicesIndexClientProps) {
                       href={`/services/${service.slug}`}
                       className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#452702] hover:bg-[#5D3503] text-white font-montserrat text-xs uppercase tracking-[0.18em] font-medium transition-all duration-300 shadow hover:shadow-md cursor-pointer rounded-[2px] group"
                     >
-                      <span>Explore {service.shortTitle}</span>
+                      <span>Explore</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </div>

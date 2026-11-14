@@ -61,19 +61,6 @@ export function ServiceDetailClient({
         {/* 2. Hero Section: Grand Architectural Masthead */}
         <section className="relative w-full pt-10 sm:pt-16 pb-16 sm:pb-24 overflow-hidden border-b border-black/10">
           <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-16">
-            {/* Category Pill */}
-            <motion.div
-              initial={{ opacity: 0, y: 15, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-[3px] bg-[#FAF6F0] border border-black/10 mb-6 shadow-sm"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#7E4E15]" />
-              <span className="text-xs uppercase tracking-[0.2em] text-[#452702] font-semibold">
-                {service.category}
-              </span>
-            </motion.div>
-
             {/* Service Main Title */}
             <motion.h1
               initial={{ opacity: 0, y: 25, filter: "blur(12px)" }}
