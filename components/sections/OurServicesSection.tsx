@@ -131,8 +131,8 @@ export function OurServicesSection({
                 </h3>
               </motion.div>
 
-              {/* Service Items: Grand Scale Typography with Direct Navigation Links */}
-              <div className="flex flex-col space-y-2.5 sm:space-y-3.5 md:space-y-4 w-full">
+              {/* Service Items: Typography with Direct Navigation Links */}
+              <div className="flex flex-col space-y-2 sm:space-y-3 w-full">
                 {figmaServiceItems.map((item, idx) => {
                   const isSelected = selectedIndex === idx;
 
@@ -155,20 +155,13 @@ export function OurServicesSection({
                         href={`/services/${item.slug}`}
                         onMouseEnter={() => setSelectedIndex(idx)}
                         onFocus={() => setSelectedIndex(idx)}
-                        className={`group block text-left font-cradley text-[26px] sm:text-[32px] md:text-[38px] lg:text-[42px] xl:text-[44px] leading-[1.2] transition-all cursor-pointer select-none ${
+                        className={`group block text-left font-cradley text-lg sm:text-xl md:text-2xl lg:text-[26px] xl:text-[28px] tracking-[0.02em] uppercase leading-[1.25] transition-all cursor-pointer select-none ${
                           isSelected
-                            ? "underline text-[#452702] drop-shadow-[0_4px_6px_rgba(0,0,0,0.12)] font-normal translate-x-2"
+                            ? "underline text-[#452702] font-normal translate-x-1.5"
                             : "text-[#452702]/65 hover:text-[#452702] font-normal hover:translate-x-1"
                         }`}
                       >
-                        <span className="flex items-center gap-3">
-                          <span>{item.title}</span>
-                          {isSelected && (
-                            <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs font-montserrat uppercase tracking-wider font-semibold text-[#7E4E15]">
-                              Open Page →
-                            </span>
-                          )}
-                        </span>
+                        <span>{item.title}</span>
                       </Link>
                     </motion.div>
                   );
@@ -251,19 +244,14 @@ export function OurServicesSection({
                 <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
               </Link>
 
-              {/* Service Label & Click-Through Badge */}
+              {/* Service Label Badge */}
               <Link
                 href={`/services/${activeService.slug}`}
                 className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 z-10 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-[3px] border border-black/5 shadow-sm hover:bg-[#452702] hover:text-white transition-colors group/label cursor-pointer"
               >
-                <div className="flex items-center gap-2">
-                  <span className="font-montserrat text-xs uppercase tracking-wider text-[#452702] group-hover/label:text-white font-semibold capitalize">
-                    {activeService.title}
-                  </span>
-                  <span className="text-[11px] text-[#7E4E15] group-hover/label:text-white/90 font-medium">
-                    • View Page →
-                  </span>
-                </div>
+                <span className="font-montserrat text-xs uppercase tracking-wider text-[#452702] group-hover/label:text-white font-semibold">
+                  {activeService.title}
+                </span>
               </Link>
             </motion.div>
           </div>
