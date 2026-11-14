@@ -9,7 +9,8 @@ interface SiteHeaderProps {
   onOpenConsultation?: (topic?: string) => void;
 }
 
-export function SiteHeader({ onOpenConsultation }: SiteHeaderProps) {
+export function SiteHeader({ onOpenConsultation }: SiteHeaderProps = {}) {
+  void onOpenConsultation;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -18,7 +19,7 @@ export function SiteHeader({ onOpenConsultation }: SiteHeaderProps) {
     { label: "Project", href: "/#popular-designs" },
     { label: "Services", href: "/#our-services" },
     { label: "Blog", href: "/#faq" },
-    { label: "Contact", href: "/#footer" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -42,25 +43,25 @@ export function SiteHeader({ onOpenConsultation }: SiteHeaderProps) {
         {/* Center: Standard Luxury Navigation Links */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-9">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="relative font-montserrat text-xs sm:text-[13px] uppercase tracking-[0.18em] font-medium text-[#221E1B]/75 hover:text-[#452702] transition-colors duration-200 py-1.5 group"
             >
               <span>{item.label}</span>
               <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#452702] transition-all duration-300 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* Right: Brand CTA Button (#452702 with white text) */}
         <div className="hidden md:flex items-center">
-          <button
-            onClick={() => onOpenConsultation?.("Header Inquiry")}
-            className="px-6 py-2.5 bg-[#452702] hover:bg-[#5D3503] text-white text-xs font-montserrat font-medium rounded-[2px] shadow-sm hover:shadow transition-all duration-200 cursor-pointer tracking-wider uppercase"
+          <Link
+            href="/contact"
+            className="px-6 py-2.5 bg-[#452702] hover:bg-[#5D3503] text-white text-xs font-montserrat font-medium rounded-[2px] shadow-sm hover:shadow transition-all duration-200 cursor-pointer tracking-wider uppercase inline-flex items-center justify-center"
           >
             Contact Studio
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Hamburger */}
@@ -95,26 +96,24 @@ export function SiteHeader({ onOpenConsultation }: SiteHeaderProps) {
         <div className="md:hidden bg-[#F8F1E8] border-b border-black/10 px-6 py-6 flex flex-col gap-4 shadow-lg animate-fade-in">
           <nav className="flex flex-col space-y-3 font-montserrat text-xs uppercase tracking-[0.16em]">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2.5 text-[#221E1B]/85 hover:text-[#452702] border-b border-black/5 font-medium transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="pt-3 flex flex-col gap-2.5">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenConsultation?.("Mobile Menu Inquiry");
-              }}
-              className="w-full py-3 bg-[#452702] text-white text-xs uppercase tracking-wider font-medium rounded-[2px] shadow-sm"
+            <Link
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full text-center py-3 bg-[#452702] text-white text-xs uppercase tracking-wider font-medium rounded-[2px] shadow-sm inline-block"
             >
               Contact Studio
-            </button>
+            </Link>
             <a
               href={siteConfig.whatsAppUrl}
               target="_blank"

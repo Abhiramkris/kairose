@@ -593,9 +593,12 @@ export function AboutClient() {
                     Contact Us At
                   </span>
 
-                  <h3 className="font-cradley text-xl sm:text-2xl text-white font-normal uppercase leading-snug mb-6">
-                    Head Office
+                  <h3 className="font-cradley text-lg sm:text-xl text-white font-normal uppercase leading-snug mb-1">
+                    KAIROSE INTERIOR DESIGN AND TECHNICAL SERVICES LLC
                   </h3>
+                  <p className="font-montserrat text-xs text-[#D6CCBB] font-semibold uppercase tracking-wider mb-6">
+                    Studio Showroom & Head Office
+                  </p>
 
                   <div className="space-y-5 font-montserrat text-xs sm:text-[13px] text-[#F8F1E8]/90">
                     <div className="flex items-start gap-3">

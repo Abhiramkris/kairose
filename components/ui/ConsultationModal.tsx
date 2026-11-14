@@ -102,14 +102,17 @@ export function ConsultationModal({
         ) : (
           <div>
             <div className="mb-6">
+              <span className="text-[10px] uppercase tracking-[0.18em] text-[#7E4E15] font-bold block mb-1">
+                KAIROSE INTERIOR DESIGN AND TECHNICAL SERVICES LLC
+              </span>
               <span className="text-[11px] uppercase tracking-[0.2em] text-[#A98A56] font-semibold block mb-1">
-                Dubai Studio • By Appointment Only
+                Studio Showroom & Head Office • Dubai
               </span>
               <h2 className="font-cradley text-2xl sm:text-3xl text-[#452702] font-normal">
                 Book A Consultation
               </h2>
-              <p className="text-xs text-[#221E1B]/70 mt-1 font-montserrat">
-                Selected design inquiry: <span className="font-medium text-[#452702]">{initialTopic}</span>
+              <p className="text-xs text-[#221E1B]/75 mt-1 font-montserrat">
+                Selected inquiry: <span className="font-medium text-[#452702]">{initialTopic}</span>
               </p>
             </div>
 

@@ -53,10 +53,13 @@ export function SiteFooter() {
               </p>
             </div>
 
-            <div className="mt-6 text-xs text-[#221E1B]/70 space-y-1 font-montserrat">
-              <p className="font-medium text-[#452702]">Studio Showroom & Office</p>
-              <p>{siteConfig.addressToken}</p>
-              <p>By Appointment Only • Monday – Saturday (09:00 - 18:00)</p>
+            <div className="mt-6 text-xs text-[#221E1B] space-y-1.5 font-montserrat">
+              <p className="font-bold text-[#452702] uppercase tracking-wider text-[12px] sm:text-[13px]">
+                KAIROSE INTERIOR DESIGN AND TECHNICAL SERVICES LLC
+              </p>
+              <p className="font-semibold text-[#7E4E15]">Studio Showroom & Head Office</p>
+              <p className="text-[#221E1B]/80">{siteConfig.addressToken}</p>
+              <p className="text-[#221E1B]/75">By Appointment Only • Monday – Saturday (09:00 - 18:00)</p>
             </div>
           </div>
 
@@ -99,6 +102,11 @@ export function SiteFooter() {
               <li>
                 <Link href="/#faq" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
                   FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-[#221E1B]/75 hover:text-[#452702] transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -171,7 +179,7 @@ export function SiteFooter() {
 
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-montserrat text-xs text-[#221E1B]/60">
-          <p>© 2026 KaiRose Interior Design LLC. All rights reserved. Dubai, United Arab Emirates.</p>
+          <p>© 2026 KAIROSE INTERIOR DESIGN AND TECHNICAL SERVICES LLC. All rights reserved. Dubai, United Arab Emirates.</p>
           <div className="flex items-center gap-6">
             <span className="hover:text-[#452702] cursor-pointer">Privacy Policy</span>
             <span className="hover:text-[#452702] cursor-pointer">Terms of Engagement</span>
