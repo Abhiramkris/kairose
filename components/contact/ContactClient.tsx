@@ -13,8 +13,6 @@ import {
   ArrowLeft,
   CheckCircle2,
   ExternalLink,
-  Sparkles,
-  Building2,
 } from "lucide-react";
 import { SiteHeader } from "@/components/sections/SiteHeader";
 import { SiteFooter } from "@/components/sections/SiteFooter";
@@ -92,30 +90,9 @@ export function ContactClient() {
               }}
               className="text-center max-w-4xl mx-auto"
             >
-              <div className="flex justify-center mb-4">
-                <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#452702]/15 bg-[#FAF6F0] text-[10px] sm:text-xs uppercase tracking-[0.24em] text-[#7E4E15] font-montserrat font-medium shadow-xs">
-                  <Sparkles className="w-3.5 h-3.5 text-[#7E4E15]" />
-                  Direct Studio Inquiries
-                </span>
-              </div>
-
-              <h1 className="font-cradley text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#452702] font-normal uppercase tracking-[0.06em] leading-[1.08] mb-5">
+              <h1 className="font-cradley text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#452702] font-normal uppercase tracking-[0.06em] leading-[1.08]">
                 Contact Us
               </h1>
-
-              {/* Full Company Legal Name Highlight Card */}
-              <div className="inline-block bg-[#452702] text-[#F8F1E8] px-6 sm:px-8 py-3.5 rounded-[4px] shadow-lg mb-6 max-w-3xl">
-                <span className="block text-[10px] sm:text-[11px] font-montserrat uppercase tracking-[0.22em] text-[#D6CCBB] font-semibold mb-1">
-                  Full Registered Company Legal Name
-                </span>
-                <span className="font-cradley text-base sm:text-lg md:text-xl text-white font-normal uppercase tracking-wide block">
-                  KAIROSE INTERIOR DESIGN AND TECHNICAL SERVICES LLC
-                </span>
-              </div>
-
-              <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/80 max-w-2xl mx-auto leading-relaxed">
-                Connect directly with our turnkey interior architecture and technical contracting studio in Dubai. We welcome inquiries for private residences, commercial fit-outs, and building technical solutions.
-              </p>
             </motion.div>
           </div>
         </section>
@@ -278,17 +255,6 @@ export function ContactClient() {
                       <span>Call Direct</span>
                     </a>
                   </div>
-                </div>
-
-                {/* Company Compliance Strip */}
-                <div className="bg-[#FAF6F0] p-6 rounded-[6px] border border-black/10 shadow-xs space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-montserrat uppercase tracking-[0.2em] text-[#7E4E15] font-semibold">
-                    <Building2 className="w-4 h-4 text-[#7E4E15]" />
-                    <span>Dubai Licensing & Authority Compliance</span>
-                  </div>
-                  <p className="font-montserrat text-xs text-[#221E1B]/75 leading-relaxed">
-                    <strong>KAIROSE INTERIOR DESIGN AND TECHNICAL SERVICES LLC</strong> is accredited for turnkey interior architecture, civil contracting, MEP engineering, and authority approvals across Dubai and the UAE.
-                  </p>
                 </div>
               </motion.div>
 
