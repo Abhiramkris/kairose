@@ -278,7 +278,7 @@ export function ContactClient() {
                     <h3 className="font-cradley text-2xl sm:text-3xl text-[#452702] font-normal leading-snug">
                       Schedule a Consultation
                     </h3>
-                    <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 mt-2">
+                    <p className="font-montserrat text-sm sm:text-base text-[#221E1B] font-normal mt-2">
                       Please submit your details below. Our technical and design team will contact you directly within 24 hours.
                     </p>
                   </div>

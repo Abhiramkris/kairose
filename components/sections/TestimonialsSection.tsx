@@ -161,7 +161,7 @@ export function TestimonialsSection({
             <h2 className="font-cradley text-3xl sm:text-4xl md:text-5xl text-[#452702] uppercase tracking-wide leading-tight">
               Testimonials
             </h2>
-            <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 mt-2 max-w-xl">
+            <p className="font-montserrat text-sm sm:text-base text-[#221E1B] font-normal mt-2 max-w-xl">
               Authentic stories from our bespoke residential and commercial commissions across the UAE.
             </p>
           </motion.div>
@@ -233,7 +233,7 @@ export function TestimonialsSection({
                     <Quote className="w-7 h-7 text-[#7E4E15]/25 mb-3 -scale-x-100" />
 
                     {/* Quote Text */}
-                    <p className="font-montserrat font-light text-sm sm:text-[15px] text-[#221E1B]/90 leading-relaxed italic mb-6">
+                    <p className="font-montserrat font-normal text-sm sm:text-[15px] text-[#221E1B] leading-relaxed italic mb-6">
                       “{review.quote}”
                     </p>
                   </div>

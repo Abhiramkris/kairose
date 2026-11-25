@@ -269,7 +269,7 @@ export function HeroMockup({ data, onOpenConsultation }: HeroMockupProps) {
               <h2 className="font-montserrat font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-4 leading-tight">
                 Redefining Luxury Interiors.
               </h2>
-              <p className="font-montserrat text-sm sm:text-base md:text-lg text-[#F8F1E8]/90 font-light leading-relaxed mb-7 max-w-lg">
+              <p className="font-montserrat text-base sm:text-lg md:text-xl text-white font-normal leading-relaxed mb-7 max-w-lg">
                 Bespoke spaces shaped around your lifestyle, bringing together considered materials, purposeful details and timeless design.
               </p>
               <button

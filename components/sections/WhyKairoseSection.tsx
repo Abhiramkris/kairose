@@ -71,7 +71,7 @@ export function WhyKairoseSection({ onOpenConsultation }: WhyKairoseSectionProps
           }}
           className="max-w-4xl mx-auto px-4 mb-10 sm:mb-12"
         >
-          <p className="font-montserrat font-light text-[17px] sm:text-[20px] md:text-[24px] leading-relaxed md:leading-[1.65] text-[#221E1B]/85">
+          <p className="font-montserrat font-normal text-[18px] sm:text-[21px] md:text-[25px] leading-relaxed md:leading-[1.65] text-[#221E1B]">
             Bespoke spaces shaped around your lifestyle, bringing together considered materials, purposeful details and timeless design. Bespoke spaces shaped around your lifestyle, bringing together considered materials, purposeful details and timeless design. Bespoke spaces shaped around your lifestyle, bringing together considered materials, purposeful details and timeless design.
           </p>
         </motion.div>

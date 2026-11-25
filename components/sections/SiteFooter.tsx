@@ -48,12 +48,12 @@ export function SiteFooter() {
               <p className="font-montserrat text-xs uppercase tracking-[0.2em] text-[#A98A56] font-semibold mb-3">
                 Interior Design Studio for Timeless Spaces
               </p>
-              <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 max-w-sm leading-relaxed">
+              <p className="font-montserrat text-sm sm:text-base text-[#221E1B] font-normal max-w-sm leading-relaxed">
                 Bespoke residential architecture, luxury villa renovations, and turnkey fit-outs across Dubai’s most distinguished enclaves including Palm Jumeirah, Emirates Hills, and Downtown Dubai.
               </p>
             </div>
 
-            <div className="mt-6 text-xs text-[#221E1B] space-y-1.5 font-montserrat">
+            <div className="mt-6 text-xs sm:text-sm text-[#221E1B] font-medium space-y-1.5 font-montserrat">
               <p className="font-bold text-[#452702] uppercase tracking-wider text-[12px] sm:text-[13px]">
                 KAIROSE INTERIOR DESIGN AND TECHNICAL SERVICES LLC
               </p>

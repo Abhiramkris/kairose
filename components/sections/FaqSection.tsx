@@ -99,7 +99,7 @@ export function FaqSection({ faqs }: FaqSectionProps) {
                         }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-3 pb-2 text-sm text-[#221E1B]/80 font-montserrat leading-relaxed pr-6">
+                        <div className="pt-3 pb-2 text-[15px] sm:text-base text-[#221E1B] font-montserrat font-normal leading-relaxed pr-6">
                           <p>{faq.answer}</p>
                         </div>
                       </motion.div>

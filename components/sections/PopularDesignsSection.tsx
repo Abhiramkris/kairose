@@ -62,7 +62,7 @@ export function PopularDesignsSection({
             Popular Designs
           </h2>
 
-          <p className="max-w-2xl mx-auto font-montserrat text-xs sm:text-sm text-[#221E1B]/70 font-light leading-relaxed">
+          <p className="max-w-2xl mx-auto font-montserrat text-sm sm:text-base text-[#221E1B] font-normal leading-relaxed">
             Explore our award-winning private residences, penthouses, and turnkey architectural commissions crafted across Dubai&apos;s most prestigious enclaves.
           </p>
         </motion.div>
@@ -183,7 +183,7 @@ export function PopularDesignsSection({
                     <h3 className="font-cradley text-lg sm:text-2xl text-[#452702] font-normal mb-2 leading-snug">
                       {item.title}
                     </h3>
-                    <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 leading-relaxed line-clamp-3 mb-4">
+                    <p className="font-montserrat text-sm sm:text-[15px] text-[#221E1B] font-medium leading-relaxed line-clamp-3 mb-4">
                       {item.description}
                     </p>
                   </div>

@@ -57,7 +57,7 @@ export function ServicesIndexClient({ services }: ServicesIndexClientProps) {
             <h1 className="font-cradley text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#452702] leading-[1.08] tracking-tight uppercase mb-6 max-w-5xl mx-auto">
               Our Architectural Services
             </h1>
-            <p className="font-montserrat text-base sm:text-lg md:text-xl text-[#221E1B]/80 font-light leading-relaxed max-w-3xl mx-auto mb-10">
+            <p className="font-montserrat text-base sm:text-lg md:text-xl text-[#221E1B] font-normal leading-relaxed max-w-3xl mx-auto mb-10">
               From volumetric master space planning to turnkey Italian fit-outs and circadian architectural lighting, we orchestrate prime Dubai residences with uncompromised precision.
             </p>
             <button
@@ -99,7 +99,7 @@ export function ServicesIndexClient({ services }: ServicesIndexClientProps) {
                     <h2 className="font-cradley text-3xl sm:text-4xl md:text-5xl text-[#452702] uppercase leading-tight mb-4">
                       {service.title}
                     </h2>
-                    <p className="font-montserrat text-sm sm:text-base text-[#221E1B]/80 font-light leading-relaxed mb-6">
+                    <p className="font-montserrat text-[15px] sm:text-base text-[#221E1B] font-medium leading-relaxed mb-6">
                       {service.description}
                     </p>
 

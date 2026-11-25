@@ -214,9 +214,9 @@ export function AboutClient() {
                   Transforming Visions into Stunning, Functional Realities Across the UAE.
                 </h2>
 
-                <div className="space-y-4 text-sm sm:text-base text-[#221E1B]/80 font-light leading-relaxed">
+                <div className="space-y-4 text-base sm:text-lg text-[#221E1B] font-normal leading-relaxed">
                   <p>
-                    <strong className="font-medium text-[#452702]">
+                    <strong className="font-semibold text-[#452702]">
                       KAIROSE INTERIOR DESIGN AND TECHNICAL SERVICES LLC
                     </strong>{" "}
                     was founded by industry veterans specializing in construction, interior design, and turnkey execution. Backed by a team of seasoned professionals, KAIROSE delivers expert solutions across interior architecture, building maintenance, and seamless project execution.
@@ -337,7 +337,7 @@ export function AboutClient() {
               <h2 className="font-cradley text-3xl sm:text-4xl md:text-5xl text-[#452702] font-normal uppercase tracking-[0.06em] mb-4">
                 What We Do
               </h2>
-              <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 font-light leading-relaxed">
+              <p className="font-montserrat text-sm sm:text-base text-[#221E1B] font-normal leading-relaxed">
                 From concept blueprints to building maintenance and turnkey handover, we offer full-spectrum architectural and engineering solutions.
               </p>
             </motion.div>
@@ -381,13 +381,13 @@ export function AboutClient() {
                       <h3 className="font-cradley text-xl sm:text-2xl text-[#452702] font-normal uppercase mb-3">
                         {item.title}
                       </h3>
-                      <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/80 font-light leading-relaxed mb-6">
+                      <p className="font-montserrat text-sm sm:text-[15px] text-[#221E1B] font-medium leading-relaxed mb-6">
                         {item.description}
                       </p>
 
                       <div className="space-y-2.5 pt-2 border-t border-black/10 mb-6">
                         {item.features.map((feat) => (
-                          <div key={feat} className="flex items-start space-x-2 text-xs text-[#221E1B]/75">
+                          <div key={feat} className="flex items-start space-x-2 text-xs sm:text-[13px] text-[#221E1B] font-medium">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#7E4E15] mt-0.5 flex-shrink-0" />
                             <span>{feat}</span>
                           </div>
@@ -433,7 +433,7 @@ export function AboutClient() {
               <h2 className="font-cradley text-3xl sm:text-4xl md:text-5xl text-[#452702] font-normal uppercase tracking-[0.06em] mb-4">
                 Why Choose Us
               </h2>
-              <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 font-light leading-relaxed">
+              <p className="font-montserrat text-sm sm:text-base text-[#221E1B] font-normal leading-relaxed">
                 By uniting architectural design and in-house contracting under one unified team, we ensure complete alignment, flawless craftsmanship, and adherence to timelines.
               </p>
             </motion.div>
@@ -465,7 +465,7 @@ export function AboutClient() {
                         {item.title}
                       </h3>
 
-                      <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/80 font-light leading-relaxed mb-6">
+                      <p className="font-montserrat text-sm sm:text-[15px] text-[#221E1B] font-medium leading-relaxed mb-6">
                         {item.description}
                       </p>
                     </div>
@@ -474,7 +474,7 @@ export function AboutClient() {
                       <span className="font-cradley text-2xl text-[#7E4E15] font-normal">
                         {item.stat}
                       </span>
-                      <span className="text-[10px] sm:text-[11px] uppercase tracking-wider font-montserrat text-[#221E1B]/60 font-medium">
+                      <span className="text-[10px] sm:text-[11px] uppercase tracking-wider font-montserrat text-[#221E1B]/80 font-semibold">
                         {item.statLabel}
                       </span>
                     </div>
@@ -497,7 +497,7 @@ export function AboutClient() {
                 <h2 className="font-cradley text-3xl sm:text-4xl md:text-5xl text-[#452702] font-normal uppercase tracking-[0.06em] mb-4">
                   Our Approach
                 </h2>
-                <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/80 font-light leading-relaxed">
+                <p className="font-montserrat text-sm sm:text-base text-[#221E1B] font-normal leading-relaxed">
                   Our process begins with an in-depth consultation to understand spatial functionality, client objectives, and budget parameters. We leverage these insights to guide decisions on layout, material selection, and premium finishes, establishing a defined scope of work before execution begins.
                 </p>
               </div>
@@ -516,7 +516,7 @@ export function AboutClient() {
                       <h3 className="font-cradley text-base sm:text-lg text-[#452702] font-normal mb-2">
                         {step.title}
                       </h3>
-                      <p className="font-montserrat text-xs text-[#221E1B]/75 leading-relaxed">
+                      <p className="font-montserrat text-xs sm:text-[13px] text-[#221E1B] font-medium leading-relaxed">
                         {step.description}
                       </p>
                     </div>
@@ -552,7 +552,7 @@ export function AboutClient() {
                     Ready to Transform Your Space? Why Wait?
                   </h2>
 
-                  <p className="font-montserrat text-sm sm:text-base text-[#221E1B]/80 font-light leading-relaxed mb-8">
+                  <p className="font-montserrat text-base sm:text-lg text-[#221E1B] font-medium leading-relaxed mb-8">
                     Don&apos;t let your dream interior remain just an idea. Whether you are looking to design a luxurious home, an efficient corporate office, or a standout retail space, our team is ready to bring it to life. We handle the entire journey—from the first sketch to the final execution—so you can enjoy a stress-free transformation.
                   </p>
                 </div>

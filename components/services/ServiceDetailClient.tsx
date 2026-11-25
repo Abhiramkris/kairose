@@ -76,7 +76,7 @@ export function ServiceDetailClient({
               initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="font-montserrat text-lg sm:text-xl md:text-2xl text-[#221E1B]/80 font-light leading-relaxed max-w-3xl mb-10"
+              className="font-montserrat text-lg sm:text-xl md:text-2xl text-[#221E1B] font-normal leading-relaxed max-w-3xl mb-10"
             >
               {service.tagline}
             </motion.p>
@@ -177,7 +177,7 @@ export function ServiceDetailClient({
                 <h3 className="font-cradley text-3xl sm:text-4xl text-[#452702] leading-tight uppercase mb-6">
                   {service.headline}
                 </h3>
-                <div className="space-y-5 text-[#221E1B]/85 font-montserrat font-light text-base sm:text-lg leading-relaxed">
+                <div className="space-y-5 text-[#221E1B] font-montserrat font-normal text-base sm:text-lg leading-relaxed">
                   {service.longDescription.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
@@ -189,7 +189,7 @@ export function ServiceDetailClient({
                     <h4 className="font-montserrat font-semibold text-sm uppercase tracking-wider text-[#452702] mb-1">
                       KaiRose Standard of Excellence
                     </h4>
-                    <p className="font-montserrat text-xs text-[#221E1B]/75 leading-relaxed">
+                    <p className="font-montserrat text-xs sm:text-[13px] text-[#221E1B] font-medium leading-relaxed">
                       Every project is led by a dedicated senior design director with verified Dubai authority licensing and international atelier partnerships.
                     </p>
                   </div>
@@ -228,7 +228,7 @@ export function ServiceDetailClient({
                         <h4 className="font-montserrat font-semibold text-base sm:text-lg text-[#452702] mb-2.5">
                           {item.title}
                         </h4>
-                        <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 leading-relaxed font-light">
+                        <p className="font-montserrat text-sm sm:text-[15px] text-[#221E1B] leading-relaxed font-medium">
                           {item.description}
                         </p>
                       </div>
@@ -249,7 +249,7 @@ export function ServiceDetailClient({
             <h2 className="font-cradley text-3xl sm:text-4xl md:text-5xl text-[#452702] leading-tight uppercase mb-6">
               5-Stage Project Methodology
             </h2>
-            <p className="font-montserrat text-sm sm:text-base text-[#221E1B]/75 font-light max-w-2xl mx-auto mb-16">
+            <p className="font-montserrat text-base sm:text-lg text-[#221E1B] font-normal max-w-2xl mx-auto mb-16">
               A meticulously engineered execution sequence guaranteeing transparent milestones, cost certainty, and unmatched craftsmanship from inception to handover.
             </p>
 
@@ -276,7 +276,7 @@ export function ServiceDetailClient({
                     <h3 className="font-montserrat font-semibold text-sm sm:text-base text-[#452702] mb-2 leading-snug">
                       {m.phase}
                     </h3>
-                    <p className="font-montserrat text-xs text-[#221E1B]/75 font-light leading-relaxed">
+                    <p className="font-montserrat text-xs sm:text-[13px] text-[#221E1B] font-medium leading-relaxed">
                       {m.description}
                     </p>
                   </div>
@@ -298,7 +298,7 @@ export function ServiceDetailClient({
                   Featured Spatial Works
                 </h2>
               </div>
-              <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/70 font-light max-w-md mt-4 md:mt-0">
+              <p className="font-montserrat text-sm sm:text-base text-[#221E1B] font-normal max-w-md mt-4 md:mt-0">
                 Selected villa and penthouse concepts engineered and fitted out under the {service.shortTitle} discipline.
               </p>
             </div>
@@ -345,7 +345,7 @@ export function ServiceDetailClient({
             <h2 className="font-cradley text-3xl sm:text-5xl md:text-6xl text-[#452702] leading-tight uppercase mb-6">
               Commission {service.shortTitle}
             </h2>
-            <p className="font-montserrat text-base sm:text-lg text-[#221E1B]/80 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="font-montserrat text-base sm:text-lg text-[#221E1B] font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
               Schedule a private design consultation with our senior architects in Port Saeed or request a bespoke on-site appraisal at your Dubai residence.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -409,7 +409,7 @@ export function ServiceDetailClient({
                       <ArrowUpRight className="w-5 h-5" />
                     </div>
                   </div>
-                  <p className="font-montserrat text-xs sm:text-sm text-[#221E1B]/75 font-light leading-relaxed mt-4">
+                  <p className="font-montserrat text-sm sm:text-base text-[#221E1B] font-normal leading-relaxed mt-4">
                     {other.tagline}
                   </p>
                 </Link>
