@@ -34,20 +34,23 @@ export function FaqSection({ faqs }: FaqSectionProps) {
           }}
           className="text-center mb-12 sm:mb-16"
         >
+          <span className="inline-block text-xs uppercase tracking-[0.24em] text-[#7E4E15] font-semibold mb-3">
+            FAQ
+          </span>
           <h2 className="font-cradley text-3xl sm:text-4xl md:text-5xl text-[#452702] font-normal uppercase tracking-wider">
-            Frequently Asked Question
+            Frequently Asked Questions (FAQs)
           </h2>
         </motion.div>
 
         {/* Split Grid: Left Accordion, Right Rectangular Photo */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left Column: FAQ Accordion with single-by-single blur entry */}
           <div className="lg:col-span-7 space-y-4">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
                 <motion.div
-                  key={faq.id}
+                  key={faq.id || `faq-${index}`}
                   initial={{ opacity: 0, y: 25, filter: "blur(10px)" }}
                   whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   viewport={{ once: true, margin: "-40px" }}
@@ -108,7 +111,7 @@ export function FaqSection({ faqs }: FaqSectionProps) {
           </div>
 
           {/* Right Column: Clean Rectangular Interior Photo with Apple spring and blur */}
-          <div className="lg:col-span-5 flex justify-center">
+          <div className="lg:col-span-5 flex justify-center lg:sticky lg:top-28">
             <motion.div
               initial={{ opacity: 0, scale: 0.94, filter: "blur(14px)" }}
               whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}

@@ -270,27 +270,63 @@ export const defaultApproachSteps: ApproachStep[] = [
 export const defaultFaqs: FaqItem[] = [
   {
     id: "faq-1",
-    question: "What services are included?",
+    question: "What services does KaiRose Interiors provide?",
     answer:
-      "KaiRose delivers end-to-end luxury architectural interior design: initial conceptualization, 3D photorealistic renderings, Dubai Municipality / master developer NOC permits, turnkey fit-out execution, custom Italian joinery, and full white-glove styling.",
+      "KaiRose Interiors offers comprehensive interior design, fit-out, renovation, and technical services, including gypsum works, painting, flooring, carpentry, electrical, plumbing, and HVAC solutions.",
   },
   {
     id: "faq-2",
-    question: "What are the timelines?",
+    question: "Do you handle both residential and commercial projects?",
     answer:
-      "Turnkey villa renovations and penthouse fit-outs typically span between 8 to 16 weeks depending on structural modifications, permit approvals, and bespoke furniture procurement.",
+      "Yes. We undertake residential, commercial, retail, office, hospitality, and other interior fit-out projects, delivering solutions tailored to each client’s requirements.",
   },
   {
     id: "faq-3",
-    question: "How does the pricing and consultation work?",
+    question: "Do you provide complete turnkey interior fit-out solutions?",
     answer:
-      "We provide a transparent milestone-based structure tailored to your property’s square footage and finishes. Our initial consultation outlines project scope, preliminary budgeting, and timeline guarantees.",
+      "Yes. We offer end-to-end interior fit-out solutions, from initial planning and design coordination to execution, finishing, and project handover.",
   },
   {
     id: "faq-4",
-    question: "Do you handle Dubai Municipality and developer NOC approvals?",
+    question: "Can you customize interior designs according to our requirements and budget?",
     answer:
-      "Yes. Our engineering division manages 100% of regulatory approvals, including Dubai Municipality, Civil Defense, and developer NOCs (Emaar, Nakheel, Dubai Holding, Meraas).",
+      "Absolutely. We work closely with our clients to develop practical, aesthetically appealing, and cost-effective solutions that reflect their preferences, functional needs, and budget.",
+  },
+  {
+    id: "faq-5",
+    question: "Do you provide renovation and refurbishment services?",
+    answer:
+      "Yes. We provide renovation, remodeling, refurbishment, and interior upgrading services for existing residential and commercial spaces.",
+  },
+  {
+    id: "faq-6",
+    question: "Do you provide electrical, plumbing, and air-conditioning services?",
+    answer:
+      "Yes. Our technical services include electrical installations, plumbing and sanitary works, and air-conditioning installation and maintenance, subject to applicable project requirements.",
+  },
+  {
+    id: "faq-7",
+    question: "How long does an interior fit-out project take?",
+    answer:
+      "Project timelines depend on the size, scope, complexity, and specific requirements of the project. We provide an estimated completion schedule after reviewing the project details.",
+  },
+  {
+    id: "faq-8",
+    question: "How can I request a quotation?",
+    answer:
+      "You can contact our team through our website, phone, email, or WhatsApp. Share your project requirements, and our team will assist you with the next steps and quotation process.",
+  },
+  {
+    id: "faq-9",
+    question: "Do you maintain quality and safety standards during project execution?",
+    answer:
+      "Yes. We prioritize quality workmanship, appropriate materials, site safety, and professional project coordination throughout the execution process.",
+  },
+  {
+    id: "faq-10",
+    question: "Why should I choose KaiRose Interiors?",
+    answer:
+      "KaiRose Interiors is committed to delivering quality workmanship, innovative solutions, transparent communication, and reliable project execution. Our goal is to transform spaces into functional, elegant, and inspiring environments while building long-term client relationships.",
   },
 ];
 
