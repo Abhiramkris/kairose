@@ -15,11 +15,18 @@ const chrome = spawn('/Applications/Google Chrome.app/Contents/MacOS/Google Chro
 ]);
 
 // Wait for Chrome to boot
-await new Promise(r => setTimeout(r, 1200));
-
-// Create a new target page
-const newRes = await fetch('http://127.0.0.1:9222/json/new?' + encodeURIComponent(url), { method: 'PUT' });
-const target = await newRes.json();
+let target;
+for (let i = 0; i < 15; i++) {
+  await new Promise(r => setTimeout(r, 400));
+  try {
+    const newRes = await fetch('http://127.0.0.1:9222/json/new?' + encodeURIComponent(url), { method: 'PUT' });
+    target = await newRes.json();
+    if (target && target.webSocketDebuggerUrl) break;
+  } catch {}
+}
+if (!target || !target.webSocketDebuggerUrl) {
+  throw new Error("Could not connect to Chrome debugging port");
+}
 const wsUrl = target.webSocketDebuggerUrl;
 
 const ws = new WebSocket(wsUrl);
