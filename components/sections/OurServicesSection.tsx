@@ -131,8 +131,8 @@ export function OurServicesSection({
                 </h3>
               </motion.div>
 
-              {/* Service Items: Prominent, Bolder, Larger Typography */}
-              <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-4.5 w-full">
+              {/* Service Items: Prominent on mobile, smaller and elegant on desktop */}
+              <div className="flex flex-col space-y-3 sm:space-y-3.5 md:space-y-3 lg:space-y-3.5 w-full">
                 {serviceItems.map((item, idx) => {
                   const isSelected = selectedIndex === idx;
 
@@ -159,7 +159,7 @@ export function OurServicesSection({
                         href={`/services/${item.slug}`}
                         onMouseEnter={() => setSelectedIndex(idx)}
                         onFocus={() => setSelectedIndex(idx)}
-                        className={`group block text-left font-cradley text-[23px] xs:text-[25px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-[44px] tracking-[0.02em] uppercase leading-[1.18] transition-all duration-200 cursor-pointer select-none ${
+                        className={`group block text-left font-cradley text-[23px] xs:text-[25px] sm:text-[28px] md:text-2xl lg:text-[25px] xl:text-[27px] tracking-[0.02em] uppercase leading-[1.22] transition-all duration-200 cursor-pointer select-none ${
                           isSelected
                             ? "text-[#452702] font-semibold underline decoration-[#7E4E15] decoration-2 underline-offset-6 sm:underline-offset-8 translate-x-1.5 sm:translate-x-2"
                             : "text-[#452702]/80 hover:text-[#452702] font-medium hover:translate-x-1.5"
