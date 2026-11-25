@@ -95,58 +95,58 @@ export const defaultHeroData: HeroData = {
 
 export const defaultServices: ServiceItem[] = [
   {
-    id: "space-planning-1",
-    title: "SPACE PLANNING",
-    category: "Architecture",
+    id: "interior-turnkey-fitout",
+    title: "INTERIOR TURNKEY FITOUT",
+    category: "Turnkey Contracting",
     description:
-      "Harmonizing human flow, natural daylight, and spatial volume across prime Dubai villas and penthouses.",
+      "Full-scope turnkey interior fitout solutions for luxury residences, commercial malls, corporate offices, and hospitality destinations.",
     imageUrl: "/images/hero1/744469be222c35c89679dab0fece57e1548d5b5a-8448x5770.avif",
-    accentBadge: "Master Spatial Layout",
+    accentBadge: "Concept to Handover",
   },
   {
-    id: "interior-design-1",
-    title: "INTERIOR DESIGN",
-    category: "Turnkey Design",
+    id: "joinery-mass-production",
+    title: "JOINERY & MASS PRODUCTION",
+    category: "Custom Millwork",
     description:
-      "Bespoke residential sanctuaries balancing tactile Italian textiles, monolithic stonework, and subtle Arabesque nuances.",
+      "State-of-the-art joinery manufacturing and mass production woodworking combining artisanal craftsmanship with high-capacity delivery.",
     imageUrl: "/images/hero1/20f291b13682b88ac6159f8b25f69d05c38387f7-5400x4029.avif",
-    accentBadge: "Full Concept to Handover",
+    accentBadge: "In-House Manufacturing",
   },
   {
-    id: "light-design-1",
-    title: "LIGHT DESIGN",
-    category: "Atmospheric Illumination",
+    id: "gypsum-false-ceiling",
+    title: "GYPSUM & FALSE CEILING",
+    category: "Ceiling Artistry",
     description:
-      "Architectural circadian lighting schemes calibrated to Dubai's golden sunsets and intimate evening entertaining.",
+      "Sculptural gypsum false ceilings, multi-tiered fancy designs, acoustic baffles, and integrated indirect lighting reveals.",
     imageUrl: "/images/hero1/96315a86fbba0e77a988ca09a5f68f567a802826-8574x5430.avif",
-    accentBadge: "Custom Fixtures & Ambiance",
+    accentBadge: "Level 5 Precision",
   },
   {
-    id: "interior-design-2",
-    title: "INTERIOR DESIGN",
-    category: "Custom Joinery",
+    id: "civil-works",
+    title: "CIVIL & SITE EXECUTION",
+    category: "Civil Engineering",
     description:
-      "Tailored millwork, handcrafted fluted walnut paneling, and concealed acoustic integration.",
+      "Comprehensive civil contracting, structural reconfiguration, blockwork, screeding, waterproofing, and disciplined on-site management.",
+    imageUrl: "/images/hero1/videoframe_7092.png",
+    accentBadge: "Site Supervision",
+  },
+  {
+    id: "doors-wardrobes",
+    title: "DOORS & WARDROBES",
+    category: "Built-In Systems",
+    description:
+      "Bespoke architectural internal doors, flush pivot entrances, walk-in dressing sanctuaries, and illuminated wardrobe systems.",
     imageUrl: "/images/hero1/b0164608867e856c07c82428c576338b3ad41c9b-5400x4084.avif",
-    accentBadge: "Artisanal Millwork",
+    accentBadge: "Custom Closets",
   },
   {
-    id: "light-design-2",
-    title: "LIGHT DESIGN",
-    category: "Sculptural Lighting",
+    id: "kitchens-metal-works",
+    title: "KITCHENS & METAL WORKS",
+    category: "Specialized Fabrication",
     description:
-      "Statement handblown crystal and burnished bronze chandeliers curated from European ateliers.",
-    imageUrl: "/images/hero1/videoframe_7377.png",
-    accentBadge: "Signature Illuminations",
-  },
-  {
-    id: "space-planning-2",
-    title: "SPACE PLANNING",
-    category: "Indoor-Outdoor Flow",
-    description:
-      "Seamless transitions from interior lounges to terrace majlis and private infinity poolscapes.",
+      "German and Italian engineered luxury show kitchens, architectural metal fabrication, brass inlays, and structural glass solutions.",
     imageUrl: "/images/hero1/videoframe_1439.png",
-    accentBadge: "Terrace & Majlis Flow",
+    accentBadge: "Engineered Luxury",
   },
 ];
 
